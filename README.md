@@ -1,58 +1,70 @@
-# Heart Disease Dataset Analysis - EDA & Visualization
+### 🧠 Travel Insurance Prediction - Exploratory Data Analysis & Preprocessing
 
-This project is an exploratory data analysis (EDA) of the Heart Disease dataset. The analysis focuses on understanding the distribution of key health indicators and identifying patterns or correlations that may contribute to the presence of heart disease.
-
-The project includes data cleaning, descriptive statistics, various visualizations (bar charts, boxplots, histograms, heatmaps), and insights drawn from the data to help inform further machine learning modeling or clinical interpretations.
+This project performs **exploratory data analysis (EDA)** and **preprocessing** on a customer dataset aimed at understanding and preparing the data for modeling the `Stage` variable. The dataset includes various demographic and behavioral attributes relevant to customer segmentation and lifecycle stages.
 
 ---
 
-## 📊 Main Objectives
+### 🎯 Main Objectives
 
-- Explore the distribution of key health-related features
-- Visualize relationships between independent features and heart disease status
-- Identify possible outliers and data imbalance
-- Analyze feature correlation with heart disease
-- Understand which variables might contribute most to predicting heart disease
-
----
-
-## 🛠 Tools & Libraries Used
-
-- Python
-- Pandas (data handling & manipulation)
-- Matplotlib & Seaborn (data visualization)
-- NumPy (numerical operations)
-- Plotly (interactive plots)
-- Jupyter Notebook (interactive analysis)
+* Clean and prepare data for machine learning
+* Explore numerical and categorical features
+* Identify missing values and outliers
+* Understand feature distributions and relationships
+* Encode and normalize data
+* Prepare a clean dataset for modeling the `Stage` classification
 
 ---
 
-## 🧠 Key Analyses & Visualizations
+### 🛠 Tools & Libraries Used
 
-- **Boxplots & Histograms**: For continuous features such as age, resting blood pressure, cholesterol, and maximum heart rate
-- **Bar charts**: For categorical variables like sex, chest pain type, fasting blood sugar, etc.
-- **Correlation heatmap**: To analyze relationships between all numerical features
-- **Target variable distribution**: To visualize class balance (presence/absence of heart disease)
-
----
-
-## 💡 Insights
-
-- Certain chest pain types are more frequently associated with heart disease
-- Males seem to have a higher incidence of heart disease in this dataset
-- Some variables, like thalassemia and exercise-induced angina, show strong visual relationships with the target variable
-- The dataset is relatively balanced in terms of heart disease classification, making it suitable for predictive modeling
+* **Python 3**
+* **Pandas** for data manipulation
+* **Matplotlib** and **Seaborn** for data visualization
+* **NumPy** for numerical operations
+* **Scikit-learn** for preprocessing
+* **Jupyter Notebook / Google Colab** for code execution and visualization
 
 ---
 
-## 📌 Conclusion
+### 📊 Key Steps & Visualizations
 
-This analysis lays a solid foundation for building classification models to predict the presence of heart disease. By understanding data distributions and feature relationships, we can make informed decisions in selecting features and preprocessing steps for modeling
+* **Dataset Overview**: Summary of missing values, dtypes, and basic stats
+* **Univariate Analysis**:
+
+  * Boxplots for numerical features (e.g., `Revenue`, `Tenure`)
+  * Countplots for categorical features (e.g., `Gender`, `Country`, `Product`)
+* **Bivariate Analysis**:
+
+  * Correlation heatmap to identify multicollinearity
+  * Grouped bar plots comparing feature distribution across `Stage`
+* **Outlier Detection**:
+
+  * Boxplots to detect extreme values in numeric variables
+* **Handling Missing Values**:
+
+  * Identification and imputation/cleaning strategies
+* **Data Encoding**:
+
+  * Label Encoding for target variable
+  * One-hot encoding for categorical predictors
+* **Final Dataset Preparation**:
+
+  * Clean, encoded dataset ready for modeling tasks
 
 ---
 
-## 🔍 Next Steps
+### 🧩 Dataset Target: `Stage`
 
-- Perform feature engineering
-- Apply machine learning models for classification
-- Evaluate model performance with accuracy, precision, recall, and F1-score
+The variable `Stage` represents the customer's current position in the lifecycle. This project aims to understand how various features influence or relate to different stages before applying any predictive modeling technique.
+
+---
+
+### 📌 Conclusion
+
+This notebook establishes a robust foundation for the next steps in the machine learning workflow, including:
+
+* Feature selection
+* Model training (e.g., XGBoost, Random Forest, etc.)
+* Evaluation of classification performance
+
+Proper understanding and preprocessing of the dataset is crucial for developing an effective and interpretable model.
